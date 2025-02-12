@@ -1,23 +1,14 @@
 # Haskell Intro (for Neapolis University Pafos)
 
-Final code for `02-newton.hs`:
+0. [Functional programming style](0-functional-style/info.md)
+1. [Introduction to Haskell](1-hello-haskell/info.md)
+2. [Functions: Implementing the Newton's method](2-functions/info.md)
+3. [Datatypes](3-data/info.md)
+4. [Input/output and `do`-notation](4-io/info.md)
+5. [Computational contexts and operations over values in a context](5-contexts/info.md)
+6. [Cabal projects](6-stockquotes-cabal/info.md)
 
-```haskell
-func a x = x^2 - a
-func' x = 2 * x
-eps = 0.000000000001
+## Links
 
-newton :: (Double -> Double) -> (Double -> Double) -> Double
-newton f f' = go 1
-  where
-    goodEnough :: (Double -> Double) -> Double -> Bool
-    goodEnough f x = abs (f x) < eps
-    improve f f' x = x - f x / f' x
-    go guess
-      | goodEnough f guess = guess
-      | otherwise = go (improve f f' guess)
-
-sqrtN a = newton (func a) func'
-cbrtN a = newton (\x -> x^3 - a) (\x -> 3*x^2)
-rootN n a = newton (\x -> x^n - a) (\x -> fromInteger n*x^(n-1))
-```
+* [Course with exercises by Dmitrii Kovanikov](https://github.com/haskell-beginners-2022)
+* [Get Programming with Haskell, Will Kurt](https://www.manning.com/books/get-programming-with-haskell)

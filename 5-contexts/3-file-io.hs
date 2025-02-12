@@ -6,5 +6,5 @@ countLinesInFile filePath = fmap (length . lines) $ readFile filePath
 main :: IO ()
 main = countLinesInFile filePath >>= putStrLn . message
   where
-    filePath = "05-3-file-io.hs"
-    message lineCount = "The file has " ++ show lineCount ++ " lines." 
+    filePath = "3-file-io.hs"
+    message lineCount = "The file has " ++ show lineCount ++ " lines."

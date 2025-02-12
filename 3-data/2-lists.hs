@@ -1,6 +1,6 @@
 quicksort [] = []
 quicksort (x:xs) =
-    let 
+    let
         lower = quicksort (filter (<= x) xs)
         upper = quicksort (filter (> x) xs)
     in lower ++ [x] ++ upper
@@ -11,6 +11,7 @@ fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
 --  fibs:          0 : 1 : ??
 --  (drop 1 fibs): 1 : ??
 --  zipWith (+):   ? : ??
+
 
 test = putStrLn (if conditions then "OK" else "ERROR")
   where

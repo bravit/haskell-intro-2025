@@ -7,6 +7,6 @@ countLinesInFile filePath = do
 
 main :: IO ()
 main = do
-    let filePath = "04-2-file-io.hs"
+    let filePath = "2-file-io.hs"
     lineCount <- countLinesInFile filePath
     putStrLn $ "The file has " ++ show lineCount ++ " lines."

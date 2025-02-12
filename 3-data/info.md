@@ -1,3 +1,12 @@
+# Data Types
+
+## Tuples
+
+* Pairs: pattern matching, `fst`, `snd`
+* Triples
+* Any-size tuples
+
+
 ## Lists
 
 * List: head and tail
@@ -16,17 +25,11 @@ ghci> map (\x -> x + 1) [1, 2, 3, 4]
 [2,3,4,5]
 ghci> :t map
 map :: (a -> b) -> [a] -> [b]
-ghci> :t quicksort 
+ghci> :t quicksort
 quicksort :: Ord a => [a] -> [a]
 ghci> :t length
 length :: Foldable t => t a -> Int
 ```
-
-## Tuples
-
-* Pairs: pattern matching, `fst`, `snd`
-* Triples
-* Any-size tuples
 
 ## Algebraic Data Types
 

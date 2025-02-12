@@ -3,7 +3,7 @@ cabal-version: 2.0
 name:           stockquotes
 version:        0.1
 synopsis:       Exerpt from examples to accompany the book "Haskell in Depth"
-description:    This package provides source code examples which accompany the book "Haskell in Depth" by Vitaly Bragilevsky (Manning Publications 2020). 
+description:    This package provides source code examples which accompany the book "Haskell in Depth" by Vitaly Bragilevsky (Manning Publications 2020).
 category:       Sample Code
 homepage:       https://github.com/bravit/hid-examples#readme
 bug-reports:    https://github.com/bravit/hid-examples/issues
@@ -48,5 +48,5 @@ executable stockquotes
     , fmt >=0.5 && <0.7
     , optparse-applicative >=0.14 && <0.19
     , text >=1.2 && <2.2
-    , time >=1.8 && <1.13
+    , time >=1.8 && <1.15
   default-language: Haskell2010
