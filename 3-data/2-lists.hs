@@ -6,6 +6,10 @@ quicksort (x:xs) =
     in lower ++ [x] ++ upper
 
 
+processNumbers :: [Int] -> Int
+processNumbers numbers = sum (map (^2) (filter odd numbers))
+
+
 fibs :: [Integer]
 fibs = 0 : 1 : zipWith (+) fibs (drop 1 fibs)
 --  fibs:          0 : 1 : ??
@@ -19,4 +23,5 @@ test = putStrLn (if conditions then "OK" else "ERROR")
         quicksort [1, 10, 4, 2, 4] == [1, 2, 4, 4, 10] &&
         quicksort [1.3, 1.1, -1.3] == [-1.3, 1.1, 1.3] &&
         quicksort ['Z', 'Y', 'X'] == ['X', 'Y', 'Z'] &&
+        processNumbers [1..10] == 165 &&
         take 7 fibs == [0, 1, 1, 2, 3, 5, 8]
